@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/fillIn"
+        android:id="@+id/textView2"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp" />
+
+    <TextView
+        android:layout_width="201dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/beginOne"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="27dp"
+        android:layout_marginLeft="75dp"
+        android:layout_alignStart="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/needFirst"
+        android:ems="10"
+        android:id="@+id/firstName"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/needLast"
+        android:ems="10"
+        android:id="@+id/lastName"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/firstName"
+        android:layout_alignStart="@+id/firstName"
+        android:layout_alignEnd="@+id/firstName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="@string/needID"
+        android:ems="10"
+        android:id="@+id/studentId"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/lastName"
+        android:layout_alignStart="@+id/lastName"
+        android:imeOptions="actionDone"
+        android:layout_alignEnd="@+id/lastName" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/continueOne"
+        android:id="@+id/continueOne"
+        android:layout_below="@+id/studentId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:onClick="continueOne"/>
+
+</RelativeLayout>

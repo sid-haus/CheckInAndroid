@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CheckInAndroid</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="beginOne">Welcome!</string>
+    <string name="fillIn">Please complete the info below:</string>
+    <string name="needFirst">First Name</string>
+    <string name="needLast">Last Name</string>
+    <string name="needID">Student ID number</string>
+    <string name="continueOne">Continue</string>
+    <string name="continueTwo">Done</string>
+    <string name="title_activity_main_scan_one">Tutorial</string>
+    <string name="Tutorial">How to use this app:</string>
+    <string name="Tutorial2">1. To be filled in. </string>
+</resources>
