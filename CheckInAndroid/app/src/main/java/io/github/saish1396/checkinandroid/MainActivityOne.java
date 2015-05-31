@@ -8,13 +8,14 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class mainScanOne extends Activity {
-    public String firstName = "counter";
-    public String lastName = "counter";
-    public String studentID = "counter";
+public class MainActivityOne extends Activity {
+    public String firstName= "first name";
+    public String lastName= "last name";
+    public String studentID= "student id";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main_activity_one);
         Intent intentOne = getIntent();
         firstName = intentOne.getStringExtra(welcomeOne.FIRST_NAME);
         lastName = intentOne.getStringExtra(welcomeOne.LAST_NAME);
@@ -25,7 +26,7 @@ public class mainScanOne extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main_scan_one, menu);
+        getMenuInflater().inflate(R.menu.menu_main_activity_one, menu);
         return true;
     }
 
@@ -43,9 +44,8 @@ public class mainScanOne extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
-
     public void continueTwo(View view){
-        Intent intentOne = new Intent(this, MainActivityOne.class);
+        Intent intentOne = new Intent(this, AndroidBarcodeActivityOne.class);
         intentOne.putExtra(firstName,firstName);
         intentOne.putExtra(lastName, lastName);
         intentOne.putExtra(studentID, studentID);
@@ -55,5 +55,4 @@ public class mainScanOne extends Activity {
 
 
     }
-
 }

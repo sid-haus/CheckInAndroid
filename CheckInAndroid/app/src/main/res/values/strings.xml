@@ -9,7 +9,13 @@
     <string name="needID">Student ID number</string>
     <string name="continueOne">Continue</string>
     <string name="continueTwo">Done</string>
-    <string name="title_activity_main_scan_one">Tutorial</string>
     <string name="Tutorial">How to use this app:</string>
-    <string name="Tutorial2">1. To be filled in. </string>
+    <string name="Tutorial1">1. Make sure your device has a barcode scanner of some kind installed. </string>
+    <string name="Tutorial2">2. Fill in your correct name and student ID in the appropriate places. These will be critical to signing you in! </string>
+    <string name="Tutorial3">3. Scan using either the QR or barcode. </string>
+    <string name="Tutorial4">4. Confirm and profit.</string>
+    <string name="title_activity_main_activity_one">MainActivityOne</string>
+    <string name="title_activity_android_barcode_activity_one">Check In Scanner</string>
+    <string name="checkinIn">Check in using:</string>
+    <string name="QRcode">QR Code Scanner</string>
 </resources>

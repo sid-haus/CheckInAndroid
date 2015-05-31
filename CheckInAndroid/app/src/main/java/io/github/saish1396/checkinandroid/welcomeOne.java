@@ -61,7 +61,7 @@ public class welcomeOne extends Activity {
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
     /**The following is an intent to start the next activity (mainCodeOne), and carry the key user data with it.*/
-        Intent intentOne = new Intent(this, mainScanOne.class);
+        Intent intentOne = new Intent(this, MainActivityOne.class);
         intentOne.putExtra(FIRST_NAME, firstNameString);
         intentOne.putExtra(LAST_NAME, lastNameString);
         intentOne.putExtra(STUDENT_ID, studentIDString);

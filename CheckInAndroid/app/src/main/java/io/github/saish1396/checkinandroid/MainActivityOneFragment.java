@@ -10,14 +10,14 @@ import android.view.ViewGroup;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class mainScanOneFragment extends Fragment {
+public class MainActivityOneFragment extends Fragment {
 
-    public mainScanOneFragment() {
+    public MainActivityOneFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_main_scan_one, container, false);
+        return inflater.inflate(R.layout.fragment_main_activity_one, container, false);
     }
 }
