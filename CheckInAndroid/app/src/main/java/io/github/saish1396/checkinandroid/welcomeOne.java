@@ -12,9 +12,9 @@ import android.content.Intent;
 
 
 public class welcomeOne extends Activity {
-    public final static String FIRST_NAME = "first name";
-    public final static String LAST_NAME= "last name";
-    public final static String STUDENT_ID= "student id";
+    public final static String firstName = "first name";
+    public final static String lastName= "last name";
+    public final static String studentID= "student id";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,11 +60,11 @@ public class welcomeOne extends Activity {
         int duration = Toast.LENGTH_SHORT;
         Toast toast = Toast.makeText(context, text, duration);
         toast.show();
-    /**The following is an intent to start the next activity (mainCodeOne), and carry the key user data with it.*/
-        Intent intentOne = new Intent(this, MainActivityOne.class);
-        intentOne.putExtra(FIRST_NAME, firstNameString);
-        intentOne.putExtra(LAST_NAME, lastNameString);
-        intentOne.putExtra(STUDENT_ID, studentIDString);
+    /**The following is an intent to start the next activity (mainCodeOne), and carry the key user data with it. MainActivityOne*/
+        Intent intentOne = new Intent(this, AndroidBarcodeActivityOne.class);
+        intentOne.putExtra("firstNameString", firstNameString);
+        intentOne.putExtra("lastNameString", lastNameString);
+        intentOne.putExtra("studentIDString", studentIDString);
         startActivity(intentOne);
 
 

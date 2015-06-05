@@ -9,17 +9,12 @@ import android.view.View;
 
 
 public class MainActivityOne extends Activity {
-    public String firstName= "first name";
-    public String lastName= "last name";
-    public String studentID= "student id";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_activity_one);
-        Intent intentOne = getIntent();
-        firstName = intentOne.getStringExtra(welcomeOne.FIRST_NAME);
-        lastName = intentOne.getStringExtra(welcomeOne.LAST_NAME);
-        studentID = intentOne.getStringExtra(welcomeOne.STUDENT_ID);
+
     }
 
 
@@ -45,11 +40,8 @@ public class MainActivityOne extends Activity {
         return super.onOptionsItemSelected(item);
     }
     public void continueTwo(View view){
-        Intent intentOne = new Intent(this, AndroidBarcodeActivityOne.class);
-        intentOne.putExtra(firstName,firstName);
-        intentOne.putExtra(lastName, lastName);
-        intentOne.putExtra(studentID, studentID);
-        startActivity(intentOne);
+        Intent intents = new Intent(this, welcomeOne.class);
+        startActivity(intents);
 
 
 
