@@ -15,9 +15,9 @@ import android.widget.Toast;
 
 
 public class AndroidBarcodeActivityOne extends Activity {
-    public String firstName= "first name";
-    public String lastName= "last name";
-    public String studentID= "student id";
+   public String firstNameString = "ha";
+    public String lastNameString = "ha";
+    public String studentIDString = "ha";
     static final String ACTION_SCAN = "com.google.zxing.client.android.SCAN";
 
     @Override
@@ -25,9 +25,10 @@ public class AndroidBarcodeActivityOne extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_android_barcode_activity_one);
         Intent intentOne = getIntent();
-        firstName = intentOne.getStringExtra(welcomeOne.FIRST_NAME);
-        lastName = intentOne.getStringExtra(welcomeOne.LAST_NAME);
-        studentID = intentOne.getStringExtra(welcomeOne.STUDENT_ID);
+        firstNameString = intentOne.getStringExtra("firstNameString");
+        lastNameString = intentOne.getStringExtra("lastNameString");
+        studentIDString = intentOne.getStringExtra("studentIDString");
+
     }
 
 
@@ -110,9 +111,11 @@ public class AndroidBarcodeActivityOne extends Activity {
                 String SignInContents = intent.getStringExtra("SCAN_RESULT");
                 //open website
                 WebView myWebView = (WebView) findViewById(R.id.webView);
-                myWebView.loadUrl(SignInContents + "/" + firstName + "/" + lastName);
+                myWebView.loadUrl(SignInContents + "?entry.769018466=" + firstNameString + "&entry.1294212870=" + lastNameString + "&entry.425224690=" + studentIDString);
+                /**The above is known as pre-populating the form. This allows the app to fill the website with the user's details
+                 * The only thing left to do for the user is for him/her to press the submit button.*/
                 String format = intent.getStringExtra("SCAN_RESULT_FORMAT");
-                Toast toast = Toast.makeText(this, "Confirm Sign-in here.", Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(this, "Confirm sign-in credentials here " + firstNameString + ".", Toast.LENGTH_LONG);
                 toast.show();
             }
         }
